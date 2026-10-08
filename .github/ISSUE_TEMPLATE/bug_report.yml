@@ -1,0 +1,73 @@
+name: Bug report / 不具合報告
+description: Report a crash, unexpected behavior, or compatibility problem.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem with any of my Minecraft mods. English and Japanese are welcome.
+        どのModについての報告か分かるように記入してください。日本語でも大丈夫です。
+  - type: input
+    id: mod-name
+    attributes:
+      label: Mod name / Mod名
+      description: Use the name shown on the mod's download page.
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version / Modのバージョン
+      description: Include the JAR filename if you are unsure.
+    validations:
+      required: true
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version / Minecraftのバージョン
+    validations:
+      required: true
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod loader / ローダー
+      options:
+        - Fabric
+        - NeoForge
+        - Forge
+        - Quilt
+        - Other / Unknown
+    validations:
+      required: true
+  - type: input
+    id: loader-version
+    attributes:
+      label: Loader version / ローダーのバージョン
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / 起きたこと
+      description: Explain what happened and what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce / 再現手順
+      description: Include the steps if known. If the problem is intermittent, say when it occurs.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, screenshots, and other mods / ログ、画像、併用Mod
+      description: Attach relevant evidence and list other mods that might be involved. Remove personal information from logs before sharing.
+    validations:
+      required: false

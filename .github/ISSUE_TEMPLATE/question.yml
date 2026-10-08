@@ -1,0 +1,30 @@
+name: Question / 質問
+description: Ask about installation, settings, or how to use a mod.
+title: "[Question] "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a question about any of my Minecraft mods. English and Japanese are welcome.
+        導入方法、設定、使い方などの質問を記入してください。日本語でも大丈夫です。
+  - type: input
+    id: mod-name
+    attributes:
+      label: Mod name / Mod名
+      description: Enter the mod name, or All mods for a general question.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question / 質問の内容
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and other details / バージョンなどの補足
+      description: Include the mod version, Minecraft version, loader, or screenshots if they help explain the question.
+    validations:
+      required: false

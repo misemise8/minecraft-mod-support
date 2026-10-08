@@ -1,0 +1,38 @@
+name: Feature request / 機能の要望
+description: Suggest a new feature or an improvement for a mod.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest an improvement for any of my Minecraft mods. English and Japanese are welcome.
+        Modの改善や新機能についての要望を記入してください。日本語でも大丈夫です。
+  - type: input
+    id: mod-name
+    attributes:
+      label: Mod name / Mod名
+      description: Enter the mod name, or All mods if the request applies to all of them.
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Your suggestion / 要望の内容
+      description: Describe the behavior you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: When would this help? / 役立つ場面
+      description: Explain the problem this would solve or give an example of how you would use it.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context / 補足
+      description: Add examples, screenshots, or relevant version and loader details if needed.
+    validations:
+      required: false
